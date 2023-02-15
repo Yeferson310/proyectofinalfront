@@ -29,7 +29,7 @@ function Detalles(props) {
   }, [idPokemon]);
  
   useEffect(() => {
-    fetch("http://localhost:3000/pokemons/", {
+    fetch("http://localhost:5000/pokemons/", {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
