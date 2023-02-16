@@ -1,5 +1,5 @@
 import "./Header.css";
-
+import { Link } from "react-router-dom";
 function Header(props) {
     return (
         <div className="header">
@@ -8,7 +8,7 @@ function Header(props) {
           <h1>Pokédex</h1>
         </div>
         <div>
-          Ingresar
+        <Link to={"login"}>Ingresar</Link>
         </div>
   
         <div onClick={props.ordenar}>

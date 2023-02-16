@@ -7,7 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {Errorpage} from "./Componentes/Errorpage";
-
+import Login from "./Componentes/Login";
 const router = createBrowserRouter([
   // <Router>
   //   <Switch>
@@ -27,6 +27,11 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <Errorpage />,
+    errorElement: <Errorpage/>,
+  },
+  {
+    path: "login",
+    element: <Login />,
     errorElement: <Errorpage/>,
   },
  
