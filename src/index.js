@@ -6,6 +6,7 @@ import Detalles from "./Componentes/Detalles";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ErrorPage from "./Componentes/errorpage";
 
 const router = createBrowserRouter([
   // <Router>
@@ -23,8 +24,8 @@ const router = createBrowserRouter([
     element: <Detalles />,
   },
   {
-    path: "pokemon/:idPokemon",
-    element: <Detalles />,
+    path: "./Componentes/errorpage.jsx",
+    element: <ErrorPage />,
   },
 
 ]);
