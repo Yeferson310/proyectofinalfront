@@ -1,6 +1,7 @@
 import React,{ useRef,useEffect,useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import "./Detalles.css";
+import "./Login.css";
+
 
 function Login(props) {
   const usuario = useRef();
@@ -20,6 +21,7 @@ function Login(props) {
       <button onClick={autenticar}>Ingresar</button>
       
     </div>
+    
   );
 }
 export default Login;
