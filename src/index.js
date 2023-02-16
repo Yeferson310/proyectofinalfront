@@ -22,6 +22,11 @@ const router = createBrowserRouter([
     path: "pokemon/:idPokemon",
     element: <Detalles />,
   },
+  {
+    path: "pokemon/:idPokemon",
+    element: <Detalles />,
+  },
+
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
