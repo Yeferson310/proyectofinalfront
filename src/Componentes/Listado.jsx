@@ -8,9 +8,10 @@ function Listado(props) {
   const [listado, setListado] = useState();
   const [isNumericSorted, setIsNumericSorted] = useState(true);
   const getData = () => {
-    fetch("http://localhost:5000/pokemons", {
+    fetch("http://localhost:3001/pokemonlist", {
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
         Accept: "application/json",
       },
     })
@@ -19,8 +20,8 @@ function Listado(props) {
       })
 
       .then(function (myJson) {
-        setListOriginal(myJson);
-        setListado(myJson);
+        setListOriginal(myJson.pokemons);
+        setListado(myJson.pokemons);
       });
   };
 

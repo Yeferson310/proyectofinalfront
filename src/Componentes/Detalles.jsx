@@ -10,6 +10,7 @@ function Detalles(props) {
   const [pokemonTotal, setPokemonTotal] = useState(0);
   
   
+//crear id del pokemon
 
   useEffect(() => {
     fetch("http://localhost:5000/pokemons/"+ idPokemon, {

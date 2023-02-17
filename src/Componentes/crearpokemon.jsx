@@ -1,10 +1,10 @@
 
 import React from "react";
-import {crearpokemon} from "react";
 
 
-function crearpokemon() {
-    consy
+
+function Crearpokemon() {
+    
     return(
         <><title>formulario de registro pokemones</title>
             <section class="form-register">
@@ -19,4 +19,4 @@ function crearpokemon() {
     
 }
 
-export default crearpokemon;
+export default Crearpokemon;

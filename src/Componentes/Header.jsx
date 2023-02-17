@@ -10,6 +10,10 @@ function Header(props) {
         <div>
         <Link to={"login"}>Ingresar</Link>
         </div>
+        <div>
+        <Link to={"crearpokemon"}>Crearpokemon</Link>
+        </div>
+
   
         <div onClick={props.ordenar}>
           {

@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {Errorpage} from "./Componentes/Errorpage";
 import Login from "./Componentes/Login";
+import Crearpokemon from "./Componentes/Crearpokemon";
 const router = createBrowserRouter([
   // <Router>
   //   <Switch>
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: <Login />,
+    errorElement: <Errorpage/>,
+  },
+  {
+    path: "crearpokemon",
+    element: <Crearpokemon />,
     errorElement: <Errorpage/>,
   },
  
