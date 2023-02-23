@@ -13,10 +13,10 @@ function Login(props) {
   alert("autenticando..."+ valorUsuario + valorClave);
  }
   return (
-    <div>
-      <label>usuario:</label>
+    <div className="contenedor" >
+      <label className="usuario">usuario:</label>
       <input type="text" ref={usuario}/>
-      <label>clave:</label>
+      <label className="password">clave:</label>
       <input type="password"ref={clave}/>
       <button onClick={autenticar}>Ingresar</button>
       

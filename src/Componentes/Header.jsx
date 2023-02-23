@@ -7,10 +7,10 @@ function Header(props) {
           <img src="/img/Pokeball.png" alt="Logo Pokeball" />
           <h1>Pokédex</h1>
         </div>
-        <div>
+        <div className="botoningresar">
         <Link to={"login"}>Ingresar</Link>
-        </div>
-        <div>
+        </div><br />
+        <div className="botoningresar2">
         <Link to={"crearpokemon"}>Crearpokemon</Link>
         </div>
 

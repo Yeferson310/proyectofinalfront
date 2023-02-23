@@ -1,0 +1,34 @@
+.usuario {
+    width: 100%;
+    background-color: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #24303c;
+    font-family: Calibri;
+    font-size: 18px;
+}
+.password{
+    width: 100%;
+    background-color: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #24303c;
+    font-family: Calibri;
+    font-size: 18px;
+}
+.contenedor{
+    width: 50%;
+    background-color: #24303c;
+    padding: 30px;
+    margin: center;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: Calibri;
+    color: white;
+    display: flex;
+    text-align: start;
+    align-items: center;
+    
+}
