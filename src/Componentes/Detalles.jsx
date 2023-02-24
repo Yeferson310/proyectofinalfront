@@ -13,9 +13,10 @@ function Detalles(props) {
 //crear id del pokemon
 
   useEffect(() => {
-    fetch("http://localhost:5000/pokemons/"+ idPokemon, {
+    fetch("http://localhost:3001/pokemonlist/"+idPokemon, {
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
         Accept: "application/json",
       },
     })
@@ -26,13 +27,15 @@ function Detalles(props) {
       .then(function (myJson) {
         setPokemon(myJson);
       });
+    
 
   }, [idPokemon]);
  
   useEffect(() => {
-    fetch("http://localhost:5000/pokemons/", {
+    fetch("http://localhost:3001/pokemonstotal/", {
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
         Accept: "application/json",
       },
     })
