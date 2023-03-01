@@ -8,7 +8,7 @@ function Listado(props) {
   const [listado, setListado] = useState();
   const [isNumericSorted, setIsNumericSorted] = useState(true);
   const getData = () => {
-    fetch("http://localhost:3001/pokemonlist", {
+    fetch("http://localhost:3001/pkmn", {
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
@@ -75,7 +75,7 @@ function Listado(props) {
         {listado?.map(function (array, index) {
           return (
             <div key={index}>
-              <Link to={`pokemon/${array.id}`}>
+              <Link to={`pkmn/${array.id}`}>
                 <div
                   className="poke-card"
                   style={{ borderColor: array.color1 }}

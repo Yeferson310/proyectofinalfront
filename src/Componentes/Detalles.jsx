@@ -5,7 +5,7 @@ import "./Detalles.css";
 import { useEffect } from "react";
 
 function Detalles(props) {
-  const { idPokemon } = useParams();
+  const { id_pkmn } = useParams();
   const [pokemon, setPokemon] = useState("");
   const [pokemonTotal, setPokemonTotal] = useState(0);
   
@@ -13,7 +13,7 @@ function Detalles(props) {
 //crear id del pokemon
 
   useEffect(() => {
-    fetch("http://localhost:3001/pokemonlist/"+idPokemon, {
+    fetch("http://localhost:3001/pkmn/"+id_pkmn, {
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
@@ -29,7 +29,7 @@ function Detalles(props) {
       });
     
 
-  }, [idPokemon]);
+  }, [id_pkmn]);
  
   useEffect(() => {
     fetch("http://localhost:3001/pokemonstotal/", {
@@ -47,7 +47,7 @@ function Detalles(props) {
         setPokemonTotal(myJson.length);
       });
 
-  }, [idPokemon]);
+  }, [id_pkmn]);
   return (
     <div className="details-card" style={{ backgroundColor: pokemon.color1 }}>
       {/* HEADER */}
@@ -67,7 +67,7 @@ function Detalles(props) {
       {/* IMAGEN */}
       <section className="img-floating">
         <div className="pokemon-photo">
-        <Link to={`/pokemon/${pokemon.id - 1 === 0?pokemonTotal :pokemon.id - 1}`}>
+        <Link to={`/pkmn/${pokemon.id - 1 === 0?pokemonTotal :pokemon.id - 1}`}>
 
             <img
               src="/img/left.png"
@@ -78,7 +78,7 @@ function Detalles(props) {
             />
           </Link>
           <img src={pokemon?.imagen} alt="pokemon" />
-          <Link to={`/pokemon/${pokemon.id + 1 === pokemonTotal + 1?1:pokemon.id + 1}`}>
+          <Link to={`/pkmn/${pokemon.id + 1 === pokemonTotal + 1?1:pokemon.id + 1}`}>
 
             <img
               src="/img/next.png"

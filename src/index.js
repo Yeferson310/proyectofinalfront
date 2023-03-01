@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "pokemon/:idPokemon",
+    path: "pkmn/:id_pkmn",
     element: <Detalles />,
     errorElement: <Errorpage/>,
   },

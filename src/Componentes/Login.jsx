@@ -14,7 +14,7 @@ function Login(props) {
     let valorUsuario = usuario.current.value;
     let valorClave = clave.current.value;
     let data = { usuario: valorUsuario, clave: valorClave };
-    fetch("http://localhost:3001/autenticar", {
+    fetch("http://localhost:3001/login", {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
 
       body: JSON.stringify(data),
