@@ -8,6 +8,7 @@ function Listado(props) {
   const [listado, setListado] = useState();
   const [isNumericSorted, setIsNumericSorted] = useState(true);
   const getData = () => {
+    //conectamos a la api
     fetch("http://localhost:3001/pkmn", {
       headers: {
         "Content-Type": "application/json",
@@ -15,6 +16,7 @@ function Listado(props) {
         Accept: "application/json",
       },
     })
+    
       .then(function (response) {
         return response.json();
       })
