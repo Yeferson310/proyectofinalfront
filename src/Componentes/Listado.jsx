@@ -94,7 +94,7 @@ function Listado(props) {
                     className="poke-name"
                     style={{ backgroundColor: array.color1 }}
                   >
-                    <p>{array.nombre}</p>
+                    <p>{array.name}</p>
                   </div>
                 </div>
               </Link>

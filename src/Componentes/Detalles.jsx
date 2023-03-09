@@ -25,7 +25,7 @@ function Detalles(props) {
       })
 
       .then(function (myJson) {
-        setPokemon(myJson);
+        setPokemon(myJson.pokemons[0]);
       });
     
 
@@ -44,7 +44,7 @@ function Detalles(props) {
       })
 
       .then(function (myJson) {
-        setPokemonTotal(myJson.length);
+        setPokemonTotal(myJson.length[0].total);
       });
 
   }, [id_pkmn]);
@@ -57,7 +57,7 @@ function Detalles(props) {
             <img src="/img/arrow-left.svg" alt="backArrow" className="arrows" />
           </Link>
 
-          <h2>{pokemon?.nombre}</h2>
+          <h2>{pokemon?.name}</h2>
         </div>
         <div>
           <p>#{pokemon?.idd}</p>
@@ -130,76 +130,76 @@ function Detalles(props) {
           <div>
             <ul>
               <li>
-                HP <span className="stats-number">{pokemon?.stats?.hp}</span>
+                HP <span className="stats-number">{pokemon?.hp}</span>
                 <span>
                   <input
                     className="stats-bars"
                     type="range"
                     min={0}
                     max={100}
-                    value={pokemon?.stats?.hp}
+                    value={pokemon?.hp}
                   />
                 </span>
               </li>
               <li>
-                ATK <span className="stats-number">{pokemon?.stats?.atk}</span>
+                ATK <span className="stats-number">{pokemon?.atk}</span>
                 <span>
                   <input
                     className="stats-bars"
                     type="range"
                     min={0}
                     max={100}
-                    value={pokemon?.stats?.atk}
+                    value={pokemon?.atk}
                   />
                 </span>
               </li>
               <li>
-                DEF <span className="stats-number">{pokemon?.stats?.def}</span>
+                DEF <span className="stats-number">{pokemon?.def}</span>
                 <span>
                   <input
                     className="stats-bars"
                     type="range"
                     min={0}
                     max={100}
-                    value={pokemon?.stats?.def}
+                    value={pokemon?.def}
                   />
                 </span>
               </li>
               <li>
                 SATK{" "}
-                <span className="stats-number">{pokemon?.stats?.satk}</span>
+                <span className="stats-number">{pokemon?.satk}</span>
                 <span>
                   <input
                     className="stats-bars"
                     type="range"
                     min={0}
                     max={100}
-                    value={pokemon?.stats?.satk}
+                    value={pokemon?.satk}
                   />
                 </span>
               </li>
               <li>
                 SDEF{" "}
-                <span className="stats-number">{pokemon?.stats?.sdef}</span>
+                <span className="stats-number">{pokemon?.sdef}</span>
                 <span>
                   <input
                     className="stats-bars"
                     type="range"
                     min={0}
                     max={100}
-                    value={pokemon?.stats?.sdef}
+                    value={pokemon?.sdef}
                   />
                 </span>
               </li>
               <li>
-                SPD <span className="stats-number">{pokemon?.stats?.spd}</span>
+                SPD <span className="stats-number">{pokemon?.spd}</span>
                 <span>
                   <input
                     className="stats-bars"
                     type="range"
                     min={0}
                     max={100}
-                    value={pokemon?.stats?.spd}
+                    value={pokemon?.spd}
                   />
                 </span>
               </li>
