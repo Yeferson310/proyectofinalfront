@@ -87,7 +87,7 @@ function Listado(props) {
                   </div>
 
                   <div className="poke-img">
-                    <img src={array.imagen} alt="pokemon" />
+                    <img src={"http://localhost:3001"+array.imagen} alt="pokemon" />
                   </div>
 
                   <div

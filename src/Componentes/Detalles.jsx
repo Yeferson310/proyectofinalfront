@@ -67,7 +67,7 @@ function Detalles(props) {
       {/* IMAGEN */}
       <section className="img-floating">
         <div className="pokemon-photo">
-        <Link to={`/pkmn/${pokemon.id - 1 === 0?pokemonTotal :pokemon.id - 1}`}>
+        <Link to={`/pkmn/${pokemon.id - 1 === 0?pokemonTotal*1 :pokemon.id - 1}`}>
 
             <img
               src="/img/left.png"
@@ -77,8 +77,8 @@ function Detalles(props) {
               className="arrows"
             />
           </Link>
-          <img src={pokemon?.imagen} alt="pokemon" />
-          <Link to={`/pkmn/${pokemon.id + 1 === pokemonTotal + 1?1:pokemon.id + 1}`}>
+          <img src={"http://localhost:3001"+pokemon?.imagen} alt="pokemon" />
+          <Link to={`/pkmn/${pokemon.id + 1 === pokemonTotal*1 + 1?1:pokemon.id + 1}`}>
 
             <img
               src="/img/next.png"
