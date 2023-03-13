@@ -25,7 +25,7 @@ function Detalles(props) {
       })
 
       .then(function (myJson) {
-        setPokemon(myJson.pokemons[0]);
+        setPokemon(myJson.pokemons[0]);// 0 devolver array 
       });
     
 

@@ -1,48 +1,52 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./Crearpokemon.css";
+import { useNavigate } from "react-router-dom";
 
 function Crearpokemon() {
+  const nombre = useRef();
+  const navigate = useNavigate();
   function enviar() {
-    fetch("http://localhost:3001/pkmn", {
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
 
-      //body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        Accept: "application/json",
-      },
-    })
-      .then(function (response) {
-        if (response.status === 200) {
-          return response.json();
-        } else {
-          return { msg: " usuario no autorizado" };
-        }
+   
+      let data = { nombre : nombre.current.value};
+      fetch("http://localhost:3001/pkmn", {
+        method: "POST", // *GET, POST, PUT, DELETE, etc.
+  
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          Accept: "application/json",
+        },
       })
-
-      .then(function (myJson) {
-        if (myJson.msg === "OK") {
-          //loginExitoso();
-        } else {
-          alert(myJson.msg); // utilizar un modal
-        }
-      });
+        .then(function (response) {
+          if (response.status === 200) {
+            return response.json();
+          } else {
+            //return { msg: " usuario no autorizado" };
+          }
+        })
+  
+        .then(function (myJson) {
+          if (myJson.msg === "ok") {
+            navigate("/");
+          } else {
+            alert(myJson.msg); // utilizar un modal 
+          }
+  
+      
+        });
   }
   return (
     <>
       <title>formulario de registro pokemones</title>
-      <section class="form-register">
-        <input
-          class="controls"
-          file="file"
-        
-
-        />
+      <section className="form-register">
+      <label className="nombre">nombre:</label>
+      <input type="text" ref={nombre} />
         <br />
         
         
-        <button class="boton" onClick={enviar}>
+        <button className="boton" onClick={enviar}>
           Enviar
         </button>
       </section>

@@ -33,7 +33,7 @@ function Login(props) {
       })
 
       .then(function (myJson) {
-        if (myJson.msg === "OK") {
+        if (myJson.msg === "ok") {
           loginExitoso();
         } else {
           alert(myJson.msg); // utilizar un modal 
